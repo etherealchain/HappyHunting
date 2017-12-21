@@ -23,7 +23,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void setPoints(AActor* s, AActor* e);
-	
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	bool isChasing ;
 	
 private:
 

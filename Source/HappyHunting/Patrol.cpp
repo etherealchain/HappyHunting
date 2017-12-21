@@ -9,6 +9,7 @@ void APatrol::BeginPlay() {
 	isStart = true;
 	start = nullptr;
 	end = nullptr;
+	isChasing = false;
 }
 
 void APatrol::Tick(float DeltaSeconds) {
@@ -36,6 +37,7 @@ void APatrol::GotoPoint() {
 
 void APatrol::OnMoveCompleted(FAIRequestID id, const FPathFollowingResult& result) {
 	Super::OnMoveCompleted(id, result);
+	isChasing = false;
 	GetWorldTimerManager().SetTimer(timerHandle, this, &APatrol::GotoPoint, 5.0f, false);
 }
 
