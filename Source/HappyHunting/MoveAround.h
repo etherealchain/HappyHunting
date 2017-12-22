@@ -6,6 +6,7 @@
 #include "Runtime/Engine/Classes/Engine/TargetPoint.h"
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "EngineGlobals.h"
 #include "MoveAround.generated.h"
 
 /**
@@ -17,6 +18,7 @@ class HAPPYHUNTING_API AMoveAround : public AAIController
 	GENERATED_BODY()
 public:
 	void BeginPlay() override;
+	void Tick(float DeltaSeconds) override;
 	void OnMoveCompleted(FAIRequestID id, const FPathFollowingResult& result) override;
 
 private:
@@ -28,7 +30,7 @@ private:
 
 		FTimerHandle timerHandle;
 		int currentIndex;
-	
+		FVector destination;
 	
 	
 };

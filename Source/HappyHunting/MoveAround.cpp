@@ -6,16 +6,23 @@
 void AMoveAround::BeginPlay() {
 	Super::BeginPlay();
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATargetPoint::StaticClass(), targetPoints);
-	currentIndex = 0;
 	GotoPoint();
+}
+void AMoveAround::Tick(float DeltaSeconds) {
+	Super::Tick(DeltaSeconds);
+	if (GEngine)
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, GetNavAgentLocation().ToString());
 }
 
 void AMoveAround::GotoPoint() {
+	
 	if (currentIndex == targetPoints.Num()) {
 		currentIndex = 0;
 	}
 	MoveToActor(Cast<ATargetPoint>(targetPoints[currentIndex]));
 	currentIndex++;
+
+	
 }
 
 void AMoveAround::OnMoveCompleted(FAIRequestID id, const FPathFollowingResult& result) {
