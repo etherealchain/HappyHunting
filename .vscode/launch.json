@@ -1,0 +1,114 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "HappyHunting (Debug)",
+			"request": "launch",
+			"preLaunchTask": "HappyHunting Win64 Debug Build",
+			"program": "D:\\GIT\\HappyHunting\\Binaries\\Win64\\HappyHunting-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "D:\\UnRealEngine\\UE_4.18",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UnRealEngine\\UE_4.18\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "HappyHunting (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "HappyHunting Win64 DebugGame Build",
+			"program": "D:\\GIT\\HappyHunting\\Binaries\\Win64\\HappyHunting-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "D:\\UnRealEngine\\UE_4.18",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UnRealEngine\\UE_4.18\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "HappyHunting (Development)",
+			"request": "launch",
+			"preLaunchTask": "HappyHunting Win64 Development Build",
+			"program": "D:\\GIT\\HappyHunting\\Binaries\\Win64\\HappyHunting.exe",
+			"args": [
+			],
+			"cwd": "D:\\UnRealEngine\\UE_4.18",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UnRealEngine\\UE_4.18\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "HappyHunting (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "HappyHunting Win64 Shipping Build",
+			"program": "D:\\GIT\\HappyHunting\\Binaries\\Win64\\HappyHunting-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "D:\\UnRealEngine\\UE_4.18",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UnRealEngine\\UE_4.18\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "HappyHunting (Test)",
+			"request": "launch",
+			"preLaunchTask": "HappyHunting Win64 Test Build",
+			"program": "D:\\GIT\\HappyHunting\\Binaries\\Win64\\HappyHunting-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "D:\\UnRealEngine\\UE_4.18",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UnRealEngine\\UE_4.18\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "HappyHuntingEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "HappyHuntingEditor Win64 Debug Build",
+			"program": "D:\\UnRealEngine\\UE_4.18\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
+			"args": [
+				"D:\\GIT\\HappyHunting\\HappyHunting.uproject",
+				"-debug"
+			],
+			"cwd": "D:\\UnRealEngine\\UE_4.18",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UnRealEngine\\UE_4.18\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "HappyHuntingEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "HappyHuntingEditor Win64 DebugGame Build",
+			"program": "D:\\UnRealEngine\\UE_4.18\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"D:\\GIT\\HappyHunting\\HappyHunting.uproject",
+				"-debug"
+			],
+			"cwd": "D:\\UnRealEngine\\UE_4.18",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UnRealEngine\\UE_4.18\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "HappyHuntingEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "HappyHuntingEditor Win64 Development Build",
+			"program": "D:\\UnRealEngine\\UE_4.18\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"D:\\GIT\\HappyHunting\\HappyHunting.uproject"
+			],
+			"cwd": "D:\\UnRealEngine\\UE_4.18",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UnRealEngine\\UE_4.18\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		}
+	]
+}

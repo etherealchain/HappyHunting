@@ -5,27 +5,31 @@
 
 void AMoveAround::BeginPlay() {
 	Super::BeginPlay();
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATargetPoint::StaticClass(), targetPoints);
 	GotoPoint();
 }
 void AMoveAround::Tick(float DeltaSeconds) {
 	Super::Tick(DeltaSeconds);
-	if (GEngine)
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, GetNavAgentLocation().ToString());
 }
 
 void AMoveAround::GotoPoint() {
-	
-	if (currentIndex == targetPoints.Num()) {
-		currentIndex = 0;
+	FNavLocation* result = new FNavLocation;
+	while (!GetWorld()->GetNavigationSystem()->GetRandomReachablePointInRadius(GetNavAgentLocation(), 2000, *result)) {
+
 	}
-	MoveToActor(Cast<ATargetPoint>(targetPoints[currentIndex]));
-	currentIndex++;
+	MoveToLocation(result->Location);
+	/*if (GetWorld()->GetNavigationSystem()->GetRandomReachablePointInRadius(GetNavAgentLocation(), 2000, *result)) {
+		MoveToLocation(result->Location);
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, result->Location.ToString());
+	}
+	else {
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("2"));
+	}*/
+	//MoveToActor(Cast<ATargetPoint>(targetPoints[currentIndex]));
 
 	
 }
 
 void AMoveAround::OnMoveCompleted(FAIRequestID id, const FPathFollowingResult& result) {
 	Super::OnMoveCompleted(id, result);
-	GetWorldTimerManager().SetTimer(timerHandle, this, &AMoveAround::GotoPoint, 1.0f, false);
+	GetWorldTimerManager().SetTimer(timerHandle, this, &AMoveAround::GotoPoint, 3.0f, false);
 }

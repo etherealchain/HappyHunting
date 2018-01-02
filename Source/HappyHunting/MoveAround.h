@@ -6,7 +6,7 @@
 #include "Runtime/Engine/Classes/Engine/TargetPoint.h"
 #include "CoreMinimal.h"
 #include "AIController.h"
-#include "EngineGlobals.h"
+#include "Engine.h"
 #include "MoveAround.generated.h"
 
 /**
@@ -22,15 +22,9 @@ public:
 	void OnMoveCompleted(FAIRequestID id, const FPathFollowingResult& result) override;
 
 private:
-		UPROPERTY()
-		TArray<AActor*> targetPoints;
-
 		UFUNCTION()
 		void GotoPoint();
 
 		FTimerHandle timerHandle;
-		int currentIndex;
-		FVector destination;
-	
 	
 };
