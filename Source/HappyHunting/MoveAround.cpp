@@ -13,7 +13,7 @@ void AMoveAround::Tick(float DeltaSeconds) {
 
 void AMoveAround::GotoPoint() {
 	FNavLocation* result = new FNavLocation;
-	while (!GetWorld()->GetNavigationSystem()->GetRandomReachablePointInRadius(GetNavAgentLocation(), 2000, *result)) {
+	while (!GetWorld()->GetNavigationSystem()->GetRandomReachablePointInRadius(GetNavAgentLocation(), 5000, *result)) {
 
 	}
 	MoveToLocation(result->Location);
