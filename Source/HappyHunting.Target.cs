@@ -9,5 +9,6 @@ public class HappyHuntingTarget : TargetRules
 	{
 		Type = TargetType.Game;
 		ExtraModuleNames.Add("HappyHunting");
-	}
+
+    }
 }

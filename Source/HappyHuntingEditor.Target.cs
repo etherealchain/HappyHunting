@@ -9,5 +9,5 @@ public class HappyHuntingEditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 		ExtraModuleNames.Add("HappyHunting");
-	}
+    }
 }

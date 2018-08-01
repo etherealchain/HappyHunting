@@ -2,6 +2,7 @@
 
 #include "MoveAround.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
+#include "NavigationSystem.h"
 
 void AMoveAround::BeginPlay() {
 	Super::BeginPlay();
@@ -13,7 +14,7 @@ void AMoveAround::Tick(float DeltaSeconds) {
 
 void AMoveAround::GotoPoint() {
 	FNavLocation* result = new FNavLocation;
-	while (!GetWorld()->GetNavigationSystem()->GetRandomReachablePointInRadius(GetNavAgentLocation(), 5000, *result)) {
+	while (!FNavigationSystem::GetCurrent<UNavigationSystemV1>(GetWorld())->GetRandomReachablePointInRadius(GetNavAgentLocation(), 5000, *result)) {
 
 	}
 	MoveToLocation(result->Location);
