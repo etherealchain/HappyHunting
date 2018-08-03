@@ -23,7 +23,7 @@ public:
 	void OnMoveCompleted(FAIRequestID id, const FPathFollowingResult& result) override;
 
 	UFUNCTION(BlueprintCallable)
-		void setPoints(AActor* s, AActor* e);
+	void setPoints(AActor* s, AActor* e);
 	
 private:
 
